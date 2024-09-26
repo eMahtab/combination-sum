@@ -31,7 +31,8 @@ Input: candidates = [2], target = 1
 Output: []
 ```
 ## Approach :
-We keep trying to add the same number for as long as we can add (means if candidates[i] <= target we will add the same element and keep trying), if the same number can't be added anymore we try with the next number, then the next one, until the very last last element. If none of these result in a a solution, we remove the last element we added to the list. And try with the next element.
+1. We keep trying to add the same number for as long as we can add (means if candidates[i] <= target we will add the same element and keep trying, reducing the target to target - candidates[i),
+2. If the same number can't be added anymore we try with the next number, then the next one, till the very last last element. If none of these result in a solution, we remove the last element we added to the list. And try with the next element.
 This way we will search every possible combination that might lead to a solution. 
 
 
