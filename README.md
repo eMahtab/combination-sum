@@ -1,5 +1,7 @@
 # Combination Sum
 
+## https://leetcode.com/problems/combination-sum
+
 Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
 
 The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the 
@@ -7,8 +9,6 @@ frequency
  of at least one of the chosen numbers is different.
 
 The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
-
-## https://leetcode.com/problems/combination-sum
 
 ```
 Example 1:
@@ -30,6 +30,9 @@ Example 3:
 Input: candidates = [2], target = 1
 Output: []
 ```
+## Approach :
+We keep trying to add the same number for as long as we can add (means if candidates[i] <= target we will add the same element and keep trying), if the same number can't be added anymore we try with the next number, then the next one, until the very last last element. If none of these result in a a solution, we remove the last element we added to the list. And try with the next element.
+This way we will search every possible combination that might lead to a solution. 
 
 
 ## Implementation : Find Combination and Backtrack when no solution possible
