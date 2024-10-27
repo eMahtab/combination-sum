@@ -64,6 +64,7 @@ class Solution {
 }
 ```
 ## Time and Space Complexity
+The time complexity of the combinationSum function is exponential because for each element in the candidates array, the function makes a recursive call to itself with a reduced target value.
 ### Time Complexity = O(2^N)
 
 ### Space Complexity = O(N)
